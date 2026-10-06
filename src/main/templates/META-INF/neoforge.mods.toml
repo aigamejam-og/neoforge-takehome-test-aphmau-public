@@ -91,3 +91,26 @@ Example mod description.
 # stop your mod loading on the server for example.
 #[features.${mod_id}]
 #openGLVersion="[3.2,)"
+
+# CamKey - client-side camera keyframe mod (see src/main/java/dev/CamKeyMod.java)
+[[mods]]
+modId="camkey"
+version="1.0.0"
+displayName="CamKey"
+description='''
+Camera keyframe capture and smooth cinematic playback (client-side).
+'''
+
+[[dependencies.camkey]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
+    side="CLIENT"
+
+[[dependencies.camkey]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="CLIENT"
